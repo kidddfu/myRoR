@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <%= stylesheet_link_tag "application" %>
+    <meta charset="UTF-8">
+    <title>about</title>
+</head>
+<body class ="<%= params[:controller] + '-' + params[:action] %>">
+    
+    <div class="navbar clearfix">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+            Meetup
+            </a>
+            <ul class="nav left">
+                <li>
+                    <%=link_to "About", "/about" %>
+                </li>
+                <li><a href="#">Placeholder</a>
+                </li>
+                <ul class="nav right">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Signup</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <%= yield %>
+
+
+    <div class="footer">
+        <div class="container">
+            Footer
+        </div>
+    </div>
+    <%= javascript_include_tag "application" %>
+   
+    <script>
+    $('.home-banner').anystretch();
+    </script>
+</body>
+</html>
